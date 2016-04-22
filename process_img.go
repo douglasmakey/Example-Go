@@ -62,7 +62,7 @@ func imageRoutine(filesChan chan string, wg *sync.WaitGroup){
   for {
     fileName := <-filesChan
     fmt.Println("Received: " , fileName)
-    fmt.Println("Procesando Imagen: " , fileName)
+    fmt.Println("Process Img: " , fileName)
     processImage(fileName)
     wg.Done()
   }
